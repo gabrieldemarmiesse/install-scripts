@@ -1,7 +1,7 @@
 set -x -e
 
 apt-get update
-apt-get install \
+apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -18,7 +18,7 @@ add-apt-repository \
    stable"
 
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io
+apt-get install -y docker-ce docker-ce-cli containerd.io
 docker run hello-world
 
 
